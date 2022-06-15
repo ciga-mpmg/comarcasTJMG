@@ -16,4 +16,10 @@ Existem três funções no pacote:
 Para rodar as funções, basta digitar o seu nome seguido de parênteses:
 `comarcas_tjmg()`
 
-Se esse pacote é útil para você, por favor, cite-o em suas publicações utilizando os dados em `citation("comarcasTJMG")`
+Se esse pacote é útil para você, por favor, cite-o em suas publicações utilizando `citation("comarcasTJMG")` ou diretamente pela seguinte referência:
+
+
+Dornas R, Daher M (2022). _comarcasTJMG:
+  Comarcas do Tribunal de Justiça de Minas
+  Gerais_. R package version 0.0.0.9000,
+  <https://github.com/rdornas/comarcasTJMG>.
