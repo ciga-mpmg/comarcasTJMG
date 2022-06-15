@@ -20,3 +20,5 @@ Imports:
     readxl,
     stringr,
     tidyr
+URL: https://github.com/rdornas/comarcasTJMG
+BugReports: https://github.com/rdornas/comarcasTJMG/issues
