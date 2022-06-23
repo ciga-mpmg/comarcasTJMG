@@ -27,7 +27,10 @@ read_tjmg <- function() {
     dplyr::filter(!stringr::str_detect(value, "Tel")) |>
     tidyr::separate(col = value,
                     sep = "\\.{2,}",
-                    into = c("codigo_munic", "distancias")) |>
+                    into = c("codigo_munic", "distancias"),
+                    fill = "right",
+                    extra = "drop"
+                      ) |>
     dplyr::mutate(dplyr::across(dplyr::everything(), stringr::str_squish),
                   distrito = dplyr::if_else(stringr::str_detect(codigo_munic, "\\d$|-$"), "SIM", "NÃO"),
                   distrito_de = dplyr::case_when(is.na(distancias) & dplyr::lag(distrito) == "NÃO" ~ dplyr::lag(codigo_munic))) |>
