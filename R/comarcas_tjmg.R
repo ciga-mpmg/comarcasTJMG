@@ -20,6 +20,6 @@ comarcas_tjmg <- function() {
     dplyr::rename(municipio_num = municipio,
                   municipio = munic_distr_ibge) |>
     dplyr::arrange(stringi::stri_trans_general(municipio, "Latin-ASCII")) |>
-    tibble::rowid_to_column("id")
+    tibble::rowid_to_column(var = "order_id")
 
 }
