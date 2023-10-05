@@ -5,8 +5,8 @@
 comarcas_tjmg <- function() {
   # Faz o join entre a lista de comarcas e a lista de municipios do IBGE
   tjmg <- read_tjmg()
-  ibge <- read_municipios_ibge() |>
-    dplyr::filter(nome_uf == "Minas Gerais")
+  ibge <- read_municipios_ibge() 
+  #|> dplyr::filter(nome_uf == "Minas Gerais")
 
   munic_filter <- tjmg |>
     dplyr::filter(is.na(distrito_de))
