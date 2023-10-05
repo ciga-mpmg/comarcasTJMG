@@ -4,7 +4,7 @@
 #' @export
 read_municipios_ibge <- function() {
 
-  url_ibge <- "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2022/DTB_2022.zip"
+  url_ibge <- "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2021/DTB_2021.zip"
 
   # Cria uma pasta temporaria
   td <- tempdir()
