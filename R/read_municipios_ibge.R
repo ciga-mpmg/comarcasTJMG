@@ -4,7 +4,7 @@
 #' @export
 read_municipios_ibge <- function() {
 
-  url_ibge <- "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2022/UFs/MG/MG_Municipios_2022.zip"
+  url_ibge <- "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2022/DTB_2022.zip"
 
   # Cria uma pasta temporaria
   td <- tempdir()
@@ -22,7 +22,7 @@ read_municipios_ibge <- function() {
   utils::unzip(tf, exdir = td, overwrite = TRUE)
 
   # Le dados do Excel de municipios
-  munic_ibge <- sf::st_read(file.path(td, file_names$Name[4])) |> #trocando o readxl::read_xls
+  munic_ibge <- readxl::read_xls(file.path(td, file_names$Name[4])) |>
     janitor::clean_names()
 
   # Deleta arquivos e pasta
