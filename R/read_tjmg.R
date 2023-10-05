@@ -6,14 +6,14 @@ read_tjmg <- function() {
   url_tjmg <- "https://www8.tjmg.jus.br/servicos/gj/guia/docs/comarcas.pdf"
 
   # Cria um arquivo temporario
-  tempfile <- tempfile()
+  #tempfile <- tempfile()
 
   # Realiza o download do resultado da consulta a URL dentro do arquivo temporario
-  utils::download.file(url_tjmg, tempfile)
+  #utils::download.file(url_tjmg, tempfile)
 
-  txt <- pdftools::pdf_text(tempfile)
+  txt <- pdftools::pdf_text(url_tjmg) # troquei tempfile para url_tjmg
 
-  unlink(tempfile)
+  #unlink(tempfile)
 
   row <- scan(textConnection(txt),
               what = "character",
