@@ -13,7 +13,7 @@ comarcas_tjmg <- function() {
 
   munic_total <- dplyr::left_join(x = munic_filter,
                                   y = ibge,
-                                  by = c("munic_distr_ibge" = "nome_municipio"))
+                                  by = c("munic_distr_ibge" = "nm_mun")) # alterando "nome_municipio"
 
   munic_total |>
     dplyr::select(-distrito_de) |>
